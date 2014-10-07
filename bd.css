@@ -2,5 +2,284 @@ body {
 	color: white;
 	background-color: black;
 	text-align: center;
+	font-family: 'Stalemate', cursive;
+	margin: 0 auto;
+}
+
+a {
+	margin: 0 auto;
+}
+
+p {
+	margin: 0 auto;
+}
+
+#header #title{
+	margin: 0 auto;
+	margin-top: 0px;
+	display: none;
+}
+
+#header{
+	overflow: visible;
+	height: 190px;
+	font-size: 180px;
+	z-index: 1;
+	text-shadow: 1px 0px 25px #C3BFE6;
+}
+#solar-system{
+	position: relative;
+	top: -80px;
+	z-index: -1;
+	display: none;
+}
+
+#solar-buttons{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1018px;
+	z-index: 3;
+}
+
+#solar-buttons a{
+	font-size: 136px;
+	position: absolute;
+	left: 10%;
+	text-shadow: 1px 0px 25px #C3BFE6;
+	opacity: .6;
+	padding-bottom: 0px;
+	padding-right: 50px;
+	padding-left: 50px;
+	border: 2px solid white;
+}
+#music{
+	top: 70%;
+	height: 80px;
+	line-height: 80px;
+	display: none;
+}
+#art{
+	top: 45%;
+	height: 80px;
+	line-height: 80px;
+	padding-top: 12px;
+	display: none;
+}
+
+#solar-buttons a:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 60px solid black;
+	position: relative;
+	top: 73px;
+	margin: auto;
+	z-index: 3;
+}
+
+#red-planet {
+	position: absolute;
+	bottom: 0px;
+	right: 5%;
+	z-index: -1;
+	opacity: .5;
+	height: 50%;
+	display: none;
+}
+#red-planet:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#mondo {
+	position: absolute;
+	top: 0px;
+	right: 0%;
+	width: 300px;
+	z-index: -1;
+	opacity: .5;
+	display: none;
+}
+#mondo:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#about-wrapper {
+	min-height: 300px;
+}
+
+#about {
+	background-color: white;
+	color: black;
+	border-bottom: 200px solid white;
+	display: none;
+	z-index: -2;
+}
+
+#about h1 {
+	font-size: 96px;
+	text-align: left;
+	margin: 0 auto;
+	margin-left: 30px;
+	padding-top: 15px;
+	margin-top: 15px;
+}
+
+#about p {
+	font-size: 18px;
+	font-family: 'Open Sans';
+	text-align: left;
+	position: relative;
+	top: -30px;
+	margin-left: 90px;
+}
+
+#world-wrapper {
+	width: 100%;
+}
+
+#world {
+	/*z-index: -1;*/
+}
+
+@media (max-width: 1550px) {
+	#red-planet {
+		right: 0%;
+		width: 20%;
+		height: auto;
+	}
+	#mondo {
+		width: 200px;
+	}
+	#solar-buttons a{
+		left: 5%;
+	}
+}
+
+@media (max-width: 1200px) {
+	#header{
+		font-size: 150px;
+	}
+	#world {
+		width: 650px;
+	}
+	#solar-buttons{
+		height: 878px;
+	}
+	#solar-buttons a{
+		left: 3%;
+	}
+}
+@media (max-width: 980px) {
+	#header{
+		font-size: 120px;
+	}
+	#world {
+		width: 550px;
+	}
+	#solar-buttons{
+		height: 785px;
+	}
+	#mondo {
+		width: 150px;
+	}
+	#head{
+		display: none;
+	}
+	#about h1 {
+		font-size: 60px;
+		padding-bottom: 15px;
+	}
+}
+
+
+@media (max-width: 870px) {
+	#header{
+		font-size: 80px;
+		position: relative;
+		top: 50px;
+	}
+	#world {
+		width: 350px;
+	}
+	#solar-system{
+		position: relative;
+		top: -140px;
+	}
+	#mondo {
+		width: 110px;
+	}
+	#solar-buttons{
+		height: 599px;
+	}
+	#solar-buttons a{
+		font-size: 96px;
+		position: absolute;
+		padding-right: 25px;
+		padding-left: 25px;
+		left: 5%;
+	}
+	#red-planet {
+		width: 22%;
+		height: auto;
+	}
+}
+
+@media (max-width: 520px) {
+	#header{
+		font-size: 60px;
+	}
+}
+
+
+#head{
+	opacity: .3;
+	position: absolute;
+	top: 100px;
+	left: 500px;
+	z-index: -1;
+	-webkit-animation: rota 55s infinite linear;
+    animation: rota 55s infinite linear;
+    -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
+    animation-delay: 4s;
+}
+
+/**
+ *animations
+ */
+
+@keyframes rota {
+    from {
+        transform:rotate(110deg)
+                   translate(-485px)
+                   rotate(0deg)
+    }
+    to {
+        transform: rotate(-110deg)
+                   translate(200px, 1250px) 
+                   rotate(790deg)
+        }
+}
+@-webkit-keyframes rota {
+    from {
+        -webkit-transform: rotate(110deg)
+                   translate(-485px)
+                   rotate(0deg)
+    }
+    to {
+        -webkit-transform: 
+        		   rotate(-110deg)
+                   translate(200px, 1250px) 
+                   rotate(790deg)
+    }
 }
 
